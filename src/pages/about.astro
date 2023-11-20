@@ -18,6 +18,10 @@ const operatingSystem = "Linux";
 const quantity = 3;
 const footwear = "boots";
 const student = false;
+
+const skillColor = "navy";
+const fontWeight = "bold";
+const textUpperCase = "uppercase";
 ---
 
 <html lang="en">
@@ -32,8 +36,9 @@ const student = false;
       }
 
       .skill {
-        color: green;
-        font-weight: bold;
+         color: var(--skillColor);
+        font-weight: var(--fontWeight);
+        text-transform: var(--textUpperCase);
       }
     </style>
   </head>
