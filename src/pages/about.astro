@@ -30,6 +30,11 @@ const student = false;
         color: purple;
         font-size: 4rem;
       }
+
+      .skill {
+        color: green;
+        font-weight: bold;
+      }
     </style>
   </head>
 
@@ -57,7 +62,7 @@ const student = false;
     </ul>
     <p>My skills are:</p>
     <ul>
-      {skills.map((skill) => <li>{skill}</li>)}
+      {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>
 
     {happy && <p>I am happy to be learning Astro!</p>}
