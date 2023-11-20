@@ -15,6 +15,27 @@ const finished = true;
 const goal = 3;
 ---
 
+<style>
+  body {
+    font-family: sans-serif;
+  }
+  h1 {
+    color: #ff0000;
+  }
+  h2 {
+    color: #0000ff;
+  }
+  p {
+    color: #00ff00;
+  }
+  ul {
+    color: #ff00ff;
+  }
+  li {
+    color: #ffff00;
+  }
+</style>
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -29,18 +50,25 @@ const goal = 3;
     <h1>{pageTitle}</h1>
 
     <h2>... and my new Astro site!</h2>
-<p>Here are a few facts about me:</p>
-<ul>
-  <li>My name is {identity.firstName}.</li>
-  <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-  {identity.hobbies.length >= 2 &&
-    <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
-  }
-</ul>
-<p>My skills are:</p>
-<ul>
-  {skills.map((skill) => <li>{skill}</li>)}
-</ul>
+    <p>Here are a few facts about me:</p>
+    <ul>
+      <li>My name is {identity.firstName}.</li>
+      <li>
+        I live in {identity.country} and I work as a {identity.occupation}.
+      </li>
+      {
+        identity.hobbies.length >= 2 && (
+          <li>
+            Two of my hobbies are: {identity.hobbies[0]} and{" "}
+            {identity.hobbies[1]}
+          </li>
+        )
+      }
+    </ul>
+    <p>My skills are:</p>
+    <ul>
+      {skills.map((skill) => <li>{skill}</li>)}
+    </ul>
 
     {happy && <p>I am happy to be learning Astro!</p>}
 
